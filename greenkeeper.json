@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "novicell-packager/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
