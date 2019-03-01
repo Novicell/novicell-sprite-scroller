@@ -1,7 +1,7 @@
 // Import dependencies
 import ScrollMagic from "scrollmagic";
 import "scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js";
-import StickyFill from "stickyfill";
+import Stickyfill from "stickyfill";
 import TweenLite, {
     SteppedEase,
 } from "gsap";
@@ -35,11 +35,11 @@ export const spriteScroller = class spriteScroller {
             let backgroundPositionValues;
             let easeConfig;
             // Initialize stickyfill instance
-            let stickyfill = StickyFill();
+            let stickyfill = Stickyfill();
             // Get the element
             let spriteElement = document.querySelector(`.${element}`);
             // Get sprite wrapper element
-            let spriteContainerElement = document.querySelector(".sitcky-wrapper");
+            let spriteContainerElement = document.querySelector(".sticky-wrapper");
             // Initialize the scrollmagic controller
             let controller = new ScrollMagic.Controller();
             // Set background size of sprite:

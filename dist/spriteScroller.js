@@ -14624,7 +14624,7 @@ var spriteScroller = function spriteScroller(_ref) {
 
     var spriteElement = document.querySelector(".".concat(element)); // Get sprite wrapper element
 
-    var spriteContainerElement = document.querySelector(".sitcky-wrapper"); // Initialize the scrollmagic controller
+    var spriteContainerElement = document.querySelector(".sticky-wrapper"); // Initialize the scrollmagic controller
 
     var controller = new _scrollmagic.default.Controller(); // Set background size of sprite:
 
@@ -14687,7 +14687,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52319" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63048" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
