@@ -5,7 +5,7 @@ import Stickyfill from "stickyfill";
 import TweenLite, {
     SteppedEase,
 } from "gsap";
-export const spriteScroller = class spriteScroller {
+export class SpriteScroller {
     constructor({
         element,
         columns = 1,
@@ -68,5 +68,6 @@ export const spriteScroller = class spriteScroller {
                 .setTween(tween) // the tween durtion can be omitted and defaults to 1
                 .addTo(controller)
         };
+        this.init();
     }
 }

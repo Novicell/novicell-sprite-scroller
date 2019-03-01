@@ -14570,7 +14570,7 @@ module.exports = (function(doc, win) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.spriteScroller = void 0;
+exports.SpriteScroller = void 0;
 
 var _scrollmagic = _interopRequireDefault(require("scrollmagic"));
 
@@ -14586,7 +14586,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var spriteScroller = function spriteScroller(_ref) {
+var SpriteScroller = function SpriteScroller(_ref) {
   var element = _ref.element,
       _ref$columns = _ref.columns,
       columns = _ref$columns === void 0 ? 1 : _ref$columns,
@@ -14601,7 +14601,7 @@ var spriteScroller = function spriteScroller(_ref) {
     offset: 0
   } : _ref$scrollMagicOptio;
 
-  _classCallCheck(this, spriteScroller);
+  _classCallCheck(this, SpriteScroller);
 
   this.element = element;
   this.columns = columns;
@@ -14657,9 +14657,11 @@ var spriteScroller = function spriteScroller(_ref) {
     .setTween(tween) // the tween durtion can be omitted and defaults to 1
     .addTo(controller);
   };
+
+  this.init();
 };
 
-exports.spriteScroller = spriteScroller;
+exports.SpriteScroller = SpriteScroller;
 },{"scrollmagic":"../../node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js","scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js":"../../node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js","stickyfill":"../../node_modules/stickyfill/index.js","gsap":"../../node_modules/gsap/index.js"}],"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

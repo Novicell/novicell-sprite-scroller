@@ -14931,7 +14931,7 @@ parcelRequire = function (modules, cache, entry, globalName) {
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    exports.spriteScroller = void 0;
+    exports.SpriteScroller = void 0;
 
     var _scrollmagic = _interopRequireDefault(require("scrollmagic"));
 
@@ -14978,7 +14978,7 @@ parcelRequire = function (modules, cache, entry, globalName) {
       }
     }
 
-    var spriteScroller = function spriteScroller(_ref) {
+    var SpriteScroller = function SpriteScroller(_ref) {
       var element = _ref.element,
           _ref$columns = _ref.columns,
           columns = _ref$columns === void 0 ? 1 : _ref$columns,
@@ -14993,7 +14993,7 @@ parcelRequire = function (modules, cache, entry, globalName) {
         offset: 0
       } : _ref$scrollMagicOptio;
 
-      _classCallCheck(this, spriteScroller);
+      _classCallCheck(this, SpriteScroller);
 
       this.element = element;
       this.columns = columns;
@@ -15049,9 +15049,11 @@ parcelRequire = function (modules, cache, entry, globalName) {
         .setTween(tween) // the tween durtion can be omitted and defaults to 1
         .addTo(controller);
       };
+
+      this.init();
     };
 
-    exports.spriteScroller = spriteScroller;
+    exports.SpriteScroller = SpriteScroller;
   }, {
     "scrollmagic": "../../node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js",
     "scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js": "../../node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js",
@@ -15234,7 +15236,7 @@ parcelRequire = function (modules, cache, entry, globalName) {
 
 var _spriteScroller = require("../dist/spriteScroller.js");
 
-var spriteOne = new _spriteScroller.spriteScroller({
+var spriteOne = new _spriteScroller.SpriteScroller({
   element: "sprite",
   rows: 46,
   columns: 1,
@@ -15243,7 +15245,6 @@ var spriteOne = new _spriteScroller.spriteScroller({
     duration: 2000
   }
 });
-spriteOne.init();
 },{"../dist/spriteScroller.js":"../dist/spriteScroller.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

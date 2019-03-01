@@ -1,7 +1,7 @@
 import {
-    spriteScroller
+    SpriteScroller
 } from "../dist/spriteScroller.js";
-let spriteOne = new spriteScroller({
+let spriteOne = new SpriteScroller({
     element: "sprite",
     rows: 46,
     columns: 1,
@@ -10,4 +10,3 @@ let spriteOne = new spriteScroller({
         duration: 2000,
     }
 });
-spriteOne.init();
