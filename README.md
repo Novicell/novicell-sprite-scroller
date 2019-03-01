@@ -69,14 +69,13 @@ let spriteOne = new SpriteScroller({
     columns: 1, // Amount of columns in sprite. if omitted, will default to 1
     direction: 'vertical', //Accepts 'vertical' or 'horizontal' the direction of the animation. If omitted, will default to 'horizontal'
     scrollMagicOptions: {
-        /* Here you can pass the usual args for the ScrollMagic scene. If omitted, it will default to {
+        /* Here you can pass the usual args for the ScrollMagic scene. If omitted, it will default to 
             triggerHook: "onEnter",
             duration: 600,
             offset: 0
-        }
         Note that many more options exist, simply look up the official scrollmagic docs for scene constructor
         */
-        duration: 2000
+        duration: 2000 // The sprite will unfold over 2000pxs.
     }
 });
 ```
