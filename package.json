@@ -1,8 +1,8 @@
 {
   "name": "novicell-sprite-scroller",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "For tweening a sprite on scroll",
-  "main": "dist/app.bundle.js",
+  "main": "dist/spriteScroller.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
