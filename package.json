@@ -12,5 +12,10 @@
     "tween"
   ],
   "author": "henrikschytze",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gsap": "^2.1.1",
+    "scrollmagic": "^2.0.6",
+    "stickyfill": "^1.1.1-strict"
+  }
 }
