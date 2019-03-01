@@ -82,8 +82,7 @@ let spriteOne = new SpriteScroller({
 
 ## Codepen
 
-TBD
-https://codepen.io/henrikschytze/pen/WPPgJJ
+https://codepen.io/henrikschytze/pen/JzGmeR
 
 ## Contribution
 
