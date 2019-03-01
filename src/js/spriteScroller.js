@@ -5,7 +5,7 @@ import Stickyfill from "stickyfill";
 import TweenLite, {
     SteppedEase,
 } from "gsap";
-export class SpriteScroller {
+export default class SpriteScroller {
     constructor({
         element,
         columns = 1,
