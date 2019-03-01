@@ -1,6 +1,6 @@
 body {
     /* Give body some height - otherwise u cant see the scroll */
-    height: 2000px;
+    height: 4000px;
     text-align: center;
 }
 
@@ -19,6 +19,7 @@ body {
     background: url("./sprite/ryu-sprite-demo.png") no-repeat 0% 0%;
 }
 
+/* This pseudoelement makes the square responsive */
 .sprite:before {
     content: "";
     display: block;

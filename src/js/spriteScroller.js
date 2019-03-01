@@ -1,62 +1,69 @@
 // Import dependencies
 import ScrollMagic from "scrollmagic";
-import "scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap";
+import "scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js";
 import StickyFill from "stickyfill";
-import TweenMax, {
+import TweenLite, {
     SteppedEase,
 } from "gsap";
-
 export const spriteScroller = class spriteScroller {
     constructor({
         element,
         columns = 1,
         rows = 1,
-        direction = "horizontal"
+        direction = "horizontal",
+        scrollMagicOptions = {
+            triggerHook: "onEnter",
+            duration: 600,
+            offset: 0
+        }
     }) {
         this.element = element;
         this.columns = columns;
         this.rows = rows;
         this.direction = direction;
+        this.scrollMagicOptions = scrollMagicOptions;
         this.init = function () {
+            // Get this props from object destructuring
             let {
                 element,
                 columns,
                 rows,
-                direction
+                direction,
+                scrollMagicOptions
             } = this;
             // Declare background-position values for when creating tween later
             let backgroundPositionValues;
+            let easeConfig;
             // Initialize stickyfill instance
             let stickyfill = StickyFill();
             // Get the element
             let spriteElement = document.querySelector(`.${element}`);
-            // Set background size of sprite:
-            spriteElement.style.backgroundSize = `${columns * 100}% ${rows * 100}%`;
+            // Get sprite wrapper element
             let spriteContainerElement = document.querySelector(".sitcky-wrapper");
-            // Use stickyfill for IE support
-            stickyfill.add(spriteContainerElement);
             // Initialize the scrollmagic controller
             let controller = new ScrollMagic.Controller();
-            // Create the tween
-            // The background-position depends on the direction
+            // Set background size of sprite:
+            spriteElement.style.backgroundSize = `${columns * 100}% ${rows * 100}%`;
+            // Use stickyfill for IE support
+            stickyfill.add(spriteContainerElement);
+            // The background-position depends on the direction, as well as the ease config -
+            // - as it depends on either the rows or the columns.
             switch (direction) {
                 case "vertical":
-                    backgroundPositionValues = "0% 100%"
+                    backgroundPositionValues = "0% 100%";
+                    easeConfig = SteppedEase.config(rows - 1);
                     break;
                 case "horizontal":
-                    backgroundPositionValues = "100% 0%"
+                    backgroundPositionValues = "100% 0%";
+                    easeConfig = SteppedEase.config(columns - 1);
                     break;
             };
-
-            let tween = TweenMax.to(spriteElement, 1.0, {
+            let tween = TweenLite.to(spriteElement, 1.0, {
                 backgroundPosition: backgroundPositionValues,
-                ease: SteppedEase.config(rows - 1)
+                ease: easeConfig
             });
             // Build scene
-            let scene = new ScrollMagic.Scene({
-                    triggerHook: "onEnter",
-                    duration: 1000
-                })
+            let scene = new ScrollMagic.Scene(scrollMagicOptions)
                 // animate color and top border in relation to scroll position
                 .setTween(tween) // the tween durtion can be omitted and defaults to 1
                 .addTo(controller)
