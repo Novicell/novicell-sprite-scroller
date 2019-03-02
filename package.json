@@ -1,6 +1,6 @@
 {
   "name": "novicell-sprite-scroller",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "For tweening a sprite on scroll",
   "main": "dist/spriteScroller.cjs.js",
   "scripts": {
