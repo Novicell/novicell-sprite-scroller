@@ -2,7 +2,7 @@
   "name": "novicell-sprite-scroller",
   "version": "1.0.4",
   "description": "For tweening a sprite on scroll",
-  "main": "dist/spriteScroller.js",
+  "main": "dist/spriteScroller.cjs.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
