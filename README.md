@@ -6,7 +6,7 @@
 
 ### Prerequisites:
 
-Your must currently be either horizontal or vertical. So no either one column with multiple rows, or one row with multiple columns (vertical vs horizontal)
+Your spritesheet must currently be either horizontal or vertical. So no either one column with multiple rows, or one row with multiple columns (vertical vs horizontal)
 
 ### Install with npm
 
@@ -21,7 +21,7 @@ Create a sticky-wrapper and a nested div with a class of sprite (this will hold 
 
 ```html
 <div class="sticky-wrapper">
-    <div class="sprite"></div>
+  <div class="sprite"></div>
 </div>
 ```
 
@@ -57,26 +57,26 @@ body {
 In your javascript, import the module
 
 ```javascript
-import {SpriteScroller} from 'novicell-sprite-scroller';
+import { SpriteScroller } from "novicell-sprite-scroller";
 ```
 
 ## Example
 
 ```javascript
 let spriteOne = new SpriteScroller({
-    element: 'sprite', // class name of the element containing the sprite background url
-    rows: 46, // Amount of rows in sprite. If omitted, will default to 1
-    columns: 1, // Amount of columns in sprite. if omitted, will default to 1
-    direction: 'vertical', //Accepts 'vertical' or 'horizontal' the direction of the animation. If omitted, will default to 'horizontal'
-    scrollMagicOptions: {
-        /* Here you can pass the usual args for the ScrollMagic scene. If omitted, it will default to 
+  element: "sprite", // class name of the element containing the sprite background url
+  rows: 46, // Amount of rows in sprite. If omitted, will default to 1
+  columns: 1, // Amount of columns in sprite. if omitted, will default to 1
+  direction: "vertical", //Accepts 'vertical' or 'horizontal' the direction of the animation. If omitted, will default to 'horizontal'
+  scrollMagicOptions: {
+    /* Here you can pass the usual args for the ScrollMagic scene. If omitted, it will default to 
             triggerHook: "onEnter",
             duration: 600,
             offset: 0
         Note that many more options exist, simply look up the official scrollmagic docs for scene constructor
         */
-        duration: 2000 // The sprite will unfold over 2000pxs.
-    }
+    duration: 2000 // The sprite will unfold over 2000pxs.
+  }
 });
 ```
 
