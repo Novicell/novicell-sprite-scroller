@@ -80,9 +80,9 @@ let spriteOne = new SpriteScroller({
 });
 ```
 
-## Codepen
+## Demo
 
-https://codepen.io/henrikschytze/pen/JzGmeR
+[Code Sandbox Demo](https://codesandbox.io/s/p39ypoz6pq?fbclid=IwAR16Gwkwa5Yz2LkUcBR-1GLRLsT05lZLqZ75P4o9ylbU94WwRu7AFLB1tx8)
 
 ## Contribution
 
